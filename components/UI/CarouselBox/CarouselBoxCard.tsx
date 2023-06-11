@@ -13,14 +13,14 @@ const CarouselBoxCard: React.FC<Props> = ({ product }) => {
   return (
     <div className="w-full h-full px-2 my-2">
       <Link
-        href={`/${product.category[0]}/${product.category[1]}/${product.category[2]}/${product.slug.current}`}
+        href={`/${product.category[0]}/${product.slug.current}`}
       >
         <a className="flex flex-col w-full p-3 shadow-lg backdrop-filter backdrop-blur-[10px] bg-palette-card/80 rounded-md">
           <div className="text-center flex-grow">
             {product?.image[0] && (
               <Image
                 src={urlFor(product?.image[0]).url()}
-                alt="laptop image"
+                alt={product?.name}
                 width={200}
                 height={185}
                 className="object-contain hover:scale-105 transition-transform !p-2"

@@ -1,5 +1,5 @@
 const en: { [key: string]: string } = {
-  mainPage: "ZiShop Main Page",
+  mainPage: "boggyShop Main Page",
   search: "Search",
   login: "Login",
   logout: "Logout",
@@ -23,7 +23,7 @@ const en: { [key: string]: string } = {
   bestSells: "The Best-Sells",
   mainMenu: "Main Menu",
   language: "Language: ",
-  fa: "فارسی - Fa",
+
   en: "English - En",
   theme: "Theme: ",
   dark: "Dark",
@@ -84,7 +84,7 @@ const en: { [key: string]: string } = {
     "There are no products in this category yet! New products will be added soon.",
   digitalBT: "Have the best Experiences",
   digitalBD:
-    "We provide the best Experience with the most popular Brands.  With a warranty of 18 months, you can be confident in your choice",
+    "We offer the newest products at the most competitive prices. We are proud to be able to provide you with the best products in the world of technology.",
   stationeryBT: "Variety in choice",
   stationeryBD:
     "When it comes to Beauty and Efficiency. We specialize in providing stationery and office sets that are beautiful and high quality.",
@@ -110,7 +110,13 @@ const en: { [key: string]: string } = {
   seeAll: "See All",
   specialSale: "Special Sale",
   seeAllNewProducts: "See All New Products",
-  digitalCategoryTitle: "Digital Products",
+  Kitchen: "Kitchen",
+  Furniture: "Furniture",
+  LivingRoom: "Living Room",
+  BedRoom: "BedRoom",
+  Bathroom: "Bathroom",
+  Office: "Office",
+  
   digitalCategoryDescription:
     "We offer the newest products at the most competitive prices",
   fashionCategoryTitle: "Fashion and Clothes",
@@ -121,7 +127,7 @@ const en: { [key: string]: string } = {
     "Anti-allergy products suitable for all skin types from reputable brands",
   sportCategoryTitle: "Sport and Trip",
   sportCategoryDescription: "High-quality and durable products",
-  houseCategoryTitle: "Furniture and kitchen",
+  houseCategoryTitle: "Furniture",
   houseCategoryDescription: "In accordance with the designs of the day",
   toyCategoryTitle: "Toys and Baby",
   toyCategoryDescription: "A combination of entertainment and creativity",
@@ -142,10 +148,10 @@ const en: { [key: string]: string } = {
   romanoDescription:
     "Romano sofa has an impressive beauty and can multiply the charm of your home decoration.",
   popularBrands: "Popular Brands",
-  zishopMap: "Zishop Map",
+  boggyShopMap: "boggyShop Map",
   aboutUs: "About Us",
   contactUs: "Contact Us",
-  saleInZishop: "Sale In Zishop",
+  saleInboggyShop: "Sale In boggyShop",
   careerOpportunities: "Career Opportunities",
   customerServices: "Customer Services",
   commonQuestions: "Common Questions",
@@ -160,7 +166,7 @@ const en: { [key: string]: string } = {
   yourEmail: "Please Enter Your Email",
   register: "Register",
   copyRight:
-    "© 2022 ZiShop. All rights reserved - Designed and Developed with ",
+    "© 2023 boggyShop. All rights reserved - Designed and Developed with ",
   sort: "Sort based on: ",
   all: "All",
   newestProducts: "Newest",
@@ -233,9 +239,9 @@ const en: { [key: string]: string } = {
   Invalid_email_or_password: "Invalid email or password",
   Email_already_exists: "Email already exists",
   aboutLongText:
-    "The ZShop store template was written to consolidate my front-end knowledge, using technologies such as Nextjs, Typescript, React, Tailwindcss, etc. as a portfolio. I would like to thank CafeDX and engineer Seyed Mehdi Hasanpour for his support.",
+    "The boggyShop store template was written to consolidate my front-end knowledge, using technologies such as Nextjs, Typescript, React, Tailwindcss, etc. as a portfolio. I would like to thank CafeDX and engineer Seyed Mehdi Hasanpour for his support.",
   aboutEnjoy: "I hope you enjoy watching and working with this template.",
-  myName: "Zahra Mirzaei",
+  myName: "Samer Gassouma",
   cafeDX: "Work is meant to improve life, not the opposite.",
   productAddedToCartMsg: "Product added to cart successfully",
 };

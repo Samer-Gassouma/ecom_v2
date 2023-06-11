@@ -6,7 +6,6 @@ import { useLanguage } from "../../hooks/useLanguage";
 interface Props {
   name: string;
   title: string;
-  description: string;
   styles: {
     backgroundColor: string;
     flexDirection: string;
@@ -24,7 +23,6 @@ interface Props {
 const CategoryLgBox: React.FC<Props> = ({
   name,
   title,
-  description,
   styles,
   href,
   imgSrc,
@@ -41,7 +39,6 @@ const CategoryLgBox: React.FC<Props> = ({
     >
       <div className="mx-[0.5rem]">
         <h3 className="text-xl 2xl:text-2xl font-[500]">{t[`${title}`]}</h3>
-        <p className="text-sm mt-2">{t[`${description}`]}</p>
         <Link href={href}>
           <a className="inline-block py-3 px-2 2xl:px-4 mt-4 bg-palette-primary hover:scale-105 transition-transform duration-300 shadow-xl ltr:text-sm rtl:text-xs text-palette-side rounded-lg">
             {t.seeAllProducts}

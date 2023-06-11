@@ -37,8 +37,8 @@ const CarouselBox: React.FC<Props> = ({
       {
         breakpoint: 1324,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 3,
+          slidesToScroll: 3,
         },
       },
       {

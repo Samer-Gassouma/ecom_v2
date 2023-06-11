@@ -52,6 +52,7 @@ const MenuItems: React.FC<Props> = (props) => {
             key={item.category}
           >
             {width <= 768 ? (
+              <Link href={`/${item.category}`}>
               <div
                 className={`flex items-center mt-3 px-5  cursor-pointer text-sm ${
                   index === activeMenuItemIndex ? "md:text-palette-primary" : ""
@@ -79,6 +80,7 @@ const MenuItems: React.FC<Props> = (props) => {
                   <ArrowDirection style={{ fontSize: "1rem" }} />
                 ) : null}
               </div>
+              </Link>
             ) : (
               <Link href={`/${item.category}`}>
                 <a

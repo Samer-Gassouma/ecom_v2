@@ -15,8 +15,5 @@ export const benefitContent = [
     imgSrc: "/images/benefit-icons/006-best-seller.webp",
     title: "warrantyBenefit",
   },
-  // {
-  //   imgSrc: "/images/benefit-icons/007-return.png",
-  //   title: "return",
-  // },
+  
 ];

@@ -3,10 +3,10 @@ import imageUrlBuilder from "@sanity/image-url";
 
 //connect to sanity
 export const client = sanityClient({
-  projectId: "3c4n15ly",
+  projectId: "zjo8mdg6",
   dataset: "production",
-  apiVersion: "2022-06-04",
   useCdn: true,
+  apiVersion: '2023-05-03',
   token: process.env.NEXT_PUBLIC_SANITY_TOKEN,
 });
 

@@ -29,7 +29,7 @@ const MegaMenu = () => {
     >
       <div className="flex items-center font-bold cursor-pointer">
         <GoGrabber style={{ fontSize: "2rem" }} />
-        <h3 className="ltr:ml-1 rtl:mr-1">{t.CategoryOfGoods}</h3>
+        <h3 className="ltr:ml-1 rtl:mr-1">{"Category Of Goods"}</h3>
       </div>
 
       <Transition

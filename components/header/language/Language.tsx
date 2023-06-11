@@ -27,10 +27,7 @@ const Language = () => {
             language="en"
             onCloseBox={() => dispatch(settingBoxActions.closeSettingBox())}
           />
-          <LanguageItem
-            language="fa"
-            onCloseBox={() => dispatch(settingBoxActions.closeSettingBox())}
-          />
+
         </div>
       </div>
 
@@ -52,7 +49,6 @@ const Language = () => {
           <div
             className={`absolute top-6 ltr:right-0 rtl:left-0 bg-palette-card py-3 px-6 shadow-md rounded-md z-10`}
           >
-            <LanguageItem language="fa" onCloseBox={onCloseLangBox} />
             <LanguageItem language="en" onCloseBox={onCloseLangBox} />
           </div>
         </>

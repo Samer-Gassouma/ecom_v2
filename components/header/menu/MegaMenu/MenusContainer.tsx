@@ -22,7 +22,7 @@ const MenusContainer = () => {
     setSubMenuItems(menuItems[0].productsGroup);
     return () => {
       dispatch(activeMenuItemActions.setActiveMenuItemIndex(0));
-      dispatch(activeMenuItemActions.setActiveMenuItemText("digital"));
+      dispatch(activeMenuItemActions.setActiveMenuItemText("Kitchen"));
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

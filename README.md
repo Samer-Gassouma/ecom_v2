@@ -1,6 +1,6 @@
 <div id='top' align="center">
 
-![ZiShop](public/images/logo.png)
+![boggyShop](public/images/logo.png)
 
 An E-commerce site template, implemented with [Next.js](https://nextjs.org/) and [TypeScript](https://www.typescriptlang.org/). Styled with [TailwindCSS](https://tailwindcss.com/). This is one of my portfolios, but I would be pleased if these codes helped others, so I published it as an open-source project. feel free to explore it, and if you need help, ask me. I would respond as soon as possible.
 <p>To support me, please create <strong>Pull request</strong> and give <strong>star⭐</strong> to this repository.<br/>
@@ -28,7 +28,7 @@ An E-commerce site template, implemented with [Next.js](https://nextjs.org/) and
 [Contact Me](#contact-me)
   
 </p>
-<img src="/public/images/zishopBanner.png"/>
+<img src="/public/images/boggyShopBanner.png"/>
 </div>
 
 ## 🔧Technologies
@@ -40,7 +40,7 @@ An E-commerce site template, implemented with [Next.js](https://nextjs.org/) and
 
 
 ## ✨Demo
-You can visit and explore in the ZiShop template at [ZiShop.vercel.app](https://zishop.vercel.app/).
+You can visit and explore in the boggyShop template at [boggyShop.vercel.app](https://boggyShop.vercel.app/).
 
 ## 🔥Features
 * Using Redux toolkit as state manager

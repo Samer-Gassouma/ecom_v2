@@ -1,6 +1,6 @@
-import type { NextPage } from "next";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
+
 
 import { useDispatch } from "react-redux";
 import { specialOfferProductsActions } from "../store/specialOfferProducts-slice";
@@ -13,13 +13,11 @@ import Carousel from "../components/carousel";
 const Offers = dynamic(() => import("../components/Offers/Offers"));
 const Category = dynamic(() => import("../components/category/Category"));
 const Newest = dynamic(() => import("../components/newest/Newest"));
-const Brands = dynamic(() => import("../components/brands"));
-const Banners = dynamic(() => import("../components/banners"), { ssr: false });
+const Banners = dynamic(() => import("../components/banners"), { ssr: true });
 
-import { IProduct } from "../lib/types/products";
 import { newestProductsFn } from "../utilities/sortByTimeStamp";
 
-const Home: NextPage<{ products: IProduct[] }> = ({ products }) => {
+const Home = ({ products, }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -39,8 +37,7 @@ const Home: NextPage<{ products: IProduct[] }> = ({ products }) => {
       <Offers />
       <Category />
       <Newest />
-      <Banners />
-      <Brands />
+     
     </div>
   );
 };
@@ -48,11 +45,14 @@ const Home: NextPage<{ products: IProduct[] }> = ({ products }) => {
 export default Home;
 
 export const getStaticProps = async () => {
+
+
   const productQuery = `*[_type=='product']`;
   const products = await client.fetch(productQuery);
 
   return {
     props: {
+
       products,
     },
   };

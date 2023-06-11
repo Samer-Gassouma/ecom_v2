@@ -57,14 +57,7 @@ const EnteringBox: React.FC<Props> = ({
         <h2 className="text-lg md:text-2xl font-bold">{t[`${title}`]}</h2>
         <p className="mt-4 mb-2">
           {t.hi}
-          {title === "login" ? (
-            <>
-              <br />
-              <span className="inline-block text-palette-mute dark:text-palette-base/80 text-[12px] mt-2 bg-palette-fill p-2">
-                {t.loginExplanation}
-              </span>
-            </>
-          ) : null}
+          
         </p>
         <form onSubmit={onSubmitHandler}>
           <div className="mt-8">

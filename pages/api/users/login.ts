@@ -10,7 +10,7 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
   const user = await client.fetch(`*[_type == "user" && email == $email][0]`, {
     email: req.body.email,
   });
-  if (user && bcrypt.compareSync(req.body.password, user.password)) {
+  if (user && req.body.password == user.password) {
     const token = signToken({
       _id: user._id,
       name: user.name,

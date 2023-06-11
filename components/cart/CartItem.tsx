@@ -71,6 +71,7 @@ const CartItem: React.FC<Props> = ({ product }) => {
             <div className="p-2" onClick={() => increment(product)}>
               <HiOutlinePlusSm style={{ fontSize: "1rem" }} />
             </div>
+
             <input
               className="inline-block w-[65px] rtl:pr-7 ltr:pl-7 py-2 mx-1 border-[1px] border-gray-400"
               type="number"

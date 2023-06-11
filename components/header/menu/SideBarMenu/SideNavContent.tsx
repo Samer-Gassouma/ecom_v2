@@ -30,7 +30,6 @@ const SideNavContent = () => {
               className="flex items-center py-3 text-palette-mute "
               key={menuItem.title}
             >
-              <menuItem.icon />
               <Link href={menuItem.href}>
                 <a className="mx-4">{t[`${menuItem.title}`]}</a>
               </Link>
@@ -40,7 +39,7 @@ const SideNavContent = () => {
         <hr className="mt-6 mb-4 border-gray-200" />
       </div>
       <h2 className="font-bold text-lg py-3 ltr:px-5 rtl:px-5">
-        {t.CategoryOfGoods}
+        {"Category Of Goods"}
       </h2>
       <MenuItems onClick={openNav} />
     </div>

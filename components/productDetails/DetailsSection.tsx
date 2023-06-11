@@ -9,7 +9,6 @@ interface Props {
 }
 const DetailsSection: React.FC<Props> = ({ product }) => {
   const { t } = useLanguage();
-
   return (
     <div className="bg-palette-card md:bg-transparent w-[100vw] md:w-auto px-5 flex-grow self-center lg:self-start mt-8 md:mt-0 !-mx-[1rem] lg:ltr:ml-4 lg:rtl:mr-4 py-5 md:py-0 rounded-tl-[4rem] rounded-tr-[3rem] flex flex-col z-10">
       <h2 className="text-palette-mute whitespace-normal text-center rtl:md:text-right ltr:md:text-left">
@@ -29,10 +28,12 @@ const DetailsSection: React.FC<Props> = ({ product }) => {
             </p>
           </div>
           <h3 className="text-lg mt-2">{t.details}</h3>
+          <p className="text-palette-mute text-sm mt-2">{product.description}</p>
           <div className="mt-4">
-            {Object.keys(product.details!).map((key) => {
-              const detailsValue = Array.isArray(product.details![key])
-                ? [...product.details![key]].join(" - ")
+            {Object.keys(product.details!).map((key) => { 
+              const detailsValue = Array.isArray(product.details![key]) && product.details![key].length > 0  
+
+                ? [...product.details![key]].join("  ")
                 : product.details![key] === true
                 ? t.true
                 : product.details![key] === false
@@ -40,6 +41,7 @@ const DetailsSection: React.FC<Props> = ({ product }) => {
                 : product.details![key];
 
               return (
+                <>
                 <div className="flex flex-wrap items-center" key={key}>
                   <h5 className="text-palette-mute text-sm py-1 my-1">
                     {t[key]}
@@ -52,6 +54,19 @@ const DetailsSection: React.FC<Props> = ({ product }) => {
                     {detailsValue}
                   </p>
                 </div>
+                <span className="border-b-2 border-palette-mute w-full block">Avalible Colors</span>
+                {product.details['color'] && product.details['color'].length > 0 && (
+                  <div className="flex flex-wrap items-center" key={key}>
+                    
+                    <div className="flex flex-row">
+                      {product.details['color'].map((color: string) => (
+                        <div className="w-5 h-5 rounded-full mx-1" style={{backgroundColor: color}}></div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                </>
+
               );
             })}
           </div>

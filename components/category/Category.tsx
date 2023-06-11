@@ -31,7 +31,6 @@ const Category = () => {
           ({
             name,
             title,
-            description,
             styles,
             href,
             imgSrc,
@@ -43,7 +42,6 @@ const Category = () => {
                 key={name}
                 name={name}
                 title={title}
-                description={description}
                 styles={styles}
                 href={href}
                 imgSrc={imgSrc}
