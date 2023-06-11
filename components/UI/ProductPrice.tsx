@@ -2,7 +2,6 @@ import React from "react";
 import { useExchangeRateGBPToIRR } from "../../hooks/useExchangeRateGBPToIRR";
 import { useLanguage } from "../../hooks/useLanguage";
 import { calculateDiscountPercentage } from "../../utilities/calculateDiscountPercentage";
-import { changeNumbersFormatEnToFa } from "../../utilities/changeNumbersFormatEnToFa";
 import { gbpCurrencyFormat } from "../../utilities/currencyFormat";
 
 interface Props {
@@ -68,7 +67,7 @@ const ProductPrice: React.FC<Props> = ({
               className="text-green-800 dark:text-green-200 ml-1 text-[12px] inline-block"
               style={{ direction: "ltr" }}
             >{`(-%${
-              locale === "en" ? discount : changeNumbersFormatEnToFa(discount!)
+               discount 
             })`}</span>
           </div>
         ) : (

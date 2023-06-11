@@ -10,20 +10,9 @@ import { useRouter } from "next/router";
 import { useWindowDimensions } from "../../../hooks/useWindowDimensions";
 import { IActiveMenuItemRootState } from "../../../lib/types/activeMenuItem";
 
-interface Props {
-  onClick?: (
-    submenu: IDropDown[] | undefined,
-    activeItemName: string,
-    index: number
-  ) => void;
-  onMouseOver?: (
-    submenu: IDropDown[] | undefined,
-    index: number,
-    activeItemName: string
-  ) => void;
-}
 
-const MenuItems: React.FC<Props> = (props) => {
+
+const MenuItems = (props) => {
   const { t, locale } = useLanguage();
   const route = useRouter();
   const dispatch = useDispatch();
@@ -31,16 +20,16 @@ const MenuItems: React.FC<Props> = (props) => {
   const ArrowDirection = locale === "en" ? HiChevronRight : HiChevronLeft;
 
   function onMenuItemClickHandler(
-    productsGroup: IDropDown[] | undefined,
-    category: string,
-    index: number
+    productsGroup,
+    category,
+    index
   ) {
     props.onClick && props.onClick(productsGroup, category, index);
     width >= 768 && dispatch(megaMenuActions.closeMegaMenu());
   }
 
   const activeMenuItemIndex = useSelector(
-    (state: IActiveMenuItemRootState) =>
+    (state) =>
       state.activeMenuItem.activeMenuItemIndex
   );
   return (

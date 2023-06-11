@@ -19,7 +19,6 @@ const MenusContainer = () => {
   }
 
   useEffect(() => {
-    setSubMenuItems(menuItems[0].productsGroup);
     return () => {
       dispatch(activeMenuItemActions.setActiveMenuItemIndex(0));
       dispatch(activeMenuItemActions.setActiveMenuItemText("Kitchen"));

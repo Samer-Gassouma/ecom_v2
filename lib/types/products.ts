@@ -25,7 +25,7 @@ export interface IProduct {
   slug: TSlug;
   price: number;
   discount?: number;
-  description: string;
+  //description: string;
   details?: IProductDetails[];
   brand: string;
   category: string[];
