@@ -7,13 +7,15 @@ const OrderSummaryBox = () => {
   const { t, locale } = useLanguage();
 
   const [success, setSuccess] = useState(false);
+  const [auth, setAuth] = useState(false);
   const [sessionId, setSessionId] = useState(null);
+
   const totalAmount = useSelector((state) => state.cart);
   const userInfo = useSelector((state) => state.userInfo.userInformation);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-  const userEmail = useSelector(
-    (state) => state.userInfo.userInformation.email
-  );
+
+  const userEmail = auth ? userInfo.email : null;
+
   const [formData, setFormData] = useState({
     name: "",
     address: "",
@@ -51,13 +53,21 @@ const OrderSummaryBox = () => {
       window.history.pushState({}, "", "/Success?session_id=" + data.sessionId);
     }
 
-    if(sessionId){
+    if (sessionId) {
       window.location.href = "/Success?session_id=" + sessionId;
     }
   };
 
-  if(success){
-    window.location.href = "/Success?session_id=" + sessionId;
+  if (!auth) {
+    return (
+      <div className="flex flex-col items-center justify-center h-screen">
+        <Link href="/login">
+          <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            You Need to Login First
+          </a>
+        </Link>
+      </div>
+    );
   }
 
   return (

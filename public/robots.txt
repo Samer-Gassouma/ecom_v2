@@ -2,12 +2,8 @@
 User-agent: *
 Allow: /
 
-User-agent: Googlebot
-Disallow: /nogooglebot/
-
 # Host
-Host: https://boggyShop.vercel.app/
+Host: undefined
 
 # Sitemaps
-Sitemap: https://boggyShop.vercel.app/sitemap.xml
-Sitemap: https://boggyShop.vercel.app/sitemap-0.xml
+Sitemap: undefined/sitemap.xml
