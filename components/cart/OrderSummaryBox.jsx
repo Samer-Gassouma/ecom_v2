@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useLanguage } from "../../hooks/useLanguage";
 import ProductPrice from "../UI/ProductPrice";
@@ -10,11 +10,14 @@ const OrderSummaryBox = () => {
   const [auth, setAuth] = useState(false);
   const [sessionId, setSessionId] = useState(null);
 
+  useEffect(() => {
+    setAuth(userInfo ? true : false);
+  }, [userInfo]);
   const totalAmount = useSelector((state) => state.cart);
   const userInfo = useSelector((state) => state.userInfo.userInformation);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-
   const userEmail = auth ? userInfo.email : null;
+
 
   const [formData, setFormData] = useState({
     name: "",
