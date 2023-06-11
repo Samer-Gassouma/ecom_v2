@@ -10,11 +10,12 @@ const OrderSummaryBox = () => {
   const [auth, setAuth] = useState(false);
   const [sessionId, setSessionId] = useState(null);
 
+ 
+  const totalAmount = useSelector((state) => state.cart);
+  const userInfo = useSelector((state) => state.userInfo.userInformation);
   useEffect(() => {
     setAuth(userInfo ? true : false);
   }, [userInfo]);
-  const totalAmount = useSelector((state) => state.cart);
-  const userInfo = useSelector((state) => state.userInfo.userInformation);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
   const userEmail = auth ? userInfo.email : null;
 
